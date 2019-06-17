@@ -1,6 +1,8 @@
-#Geolocaion
+# Geolocation
 
-Installation
+This is a simple implementation of Geolocation API.
+
+## Installation
 
 ```
 npm install
