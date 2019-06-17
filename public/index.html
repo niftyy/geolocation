@@ -14,16 +14,19 @@
       <p><strong>Longitude:</strong> <span id="longitude"></span>&deg;</p>
     </div>
     <script>
+      let latitude = "unavailable";
+      let longitude = "unavailable";
       if ("geolocation" in navigator) {
         console.log("Geolocation Available");
         navigator.geolocation.getCurrentPosition(position => {
-          var latitude = position.coords.latitude;
-          var longitude = position.coords.longitude;
+          latitude = position.coords.latitude;
+          longitude = position.coords.longitude;
           document.getElementById("latitude").textContent = latitude;
           document.getElementById("longitude").textContent = longitude;
         });
       } else {
-        console.log("Geolocation Unavailable");
+        document.getElementById("latitude").textContent = latitude;
+        document.getElementById("longitude").textContent = longitude;
       }
     </script>
   </body>
